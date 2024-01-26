@@ -2,7 +2,9 @@ Microsoft Azure AZ-900 Basics
 
 
 Deployment cloud model public ,private and Hybrid
+
 cloud provider Azure GCP AWS
+
 Iaas,PaaS,SaaS
 CapEX and OPEX
 Azure VM
