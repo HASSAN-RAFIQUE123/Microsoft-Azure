@@ -1,0 +1,9 @@
+{
+	"name": "dp203DataFactoryTestingPhase",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8a5d430e-cc3a-4041-8cf1-af5684768eee",
+		"tenantId": "c35f5da4-9a03-44e6-8bf9-92833634f6a7"
+	}
+}
