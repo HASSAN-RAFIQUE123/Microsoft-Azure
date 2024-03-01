@@ -1,0 +1,22 @@
+{
+	"name": "Excel4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Export",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Parent Service Territory Resource.xlsx",
+				"folderPath": "2-29-2024",
+				"container": "importdatakrones"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}

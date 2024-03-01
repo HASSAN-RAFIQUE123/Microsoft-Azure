@@ -1,0 +1,86 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Excel4",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "Excel2",
+						"type": "DatasetReference"
+					},
+					"name": "source2"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "join1"
+				}
+			],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source(output(",
+				"          {Service Territory Request} as string,",
+				"          {Service Territory Resource} as string,",
+				"          {WO / WoLi / SA} as string,",
+				"          {ERP Service Order} as string,",
+				"          Country as string,",
+				"          {Service Resource} as string,",
+				"          Customer as string,",
+				"          {Customer City} as string,",
+				"          {Customer No} as string,",
+				"          {Start/Earliest Time} as string,",
+				"          {End/Due Time} as string,",
+				"          {Gant Label} as string,",
+				"          {Sales Doc. SAP / KAK No.} as string,",
+				"          kNo as string,",
+				"          {Local Order No} as string,",
+				"          {Parent Service Territory Request} as string,",
+				"          {Parent Service Territory Resource} as string,",
+				"          PMS as string,",
+				"          {PMS SU} as string,",
+				"          {Service Product} as string,",
+				"          Source as string,",
+				"          {Split No} as string,",
+				"          Status as string,",
+				"          {Status Subject} as string,",
+				"          {Vorgang No} as string,",
+				"          {Work Order} as string,",
+				"          {Maintenance Activity Type No} as string,",
+				"          Asset as string,",
+				"          {Parent Asset} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source2",
+				"source1, source2 join(kNo == kNo,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1",
+				"join1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
