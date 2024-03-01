@@ -1,0 +1,138 @@
+{
+	"name": "Excel2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Export",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "2-29-2024",
+				"container": "importdatakrones"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Service Territory Request",
+				"type": "String"
+			},
+			{
+				"name": "Service Territory Resource",
+				"type": "String"
+			},
+			{
+				"name": "WO / WoLi / SA",
+				"type": "String"
+			},
+			{
+				"name": "ERP Service Order",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Service Resource",
+				"type": "String"
+			},
+			{
+				"name": "Customer",
+				"type": "String"
+			},
+			{
+				"name": "Customer City",
+				"type": "String"
+			},
+			{
+				"name": "Customer No",
+				"type": "String"
+			},
+			{
+				"name": "Start/Earliest Time",
+				"type": "String"
+			},
+			{
+				"name": "End/Due Time",
+				"type": "String"
+			},
+			{
+				"name": "Gant Label",
+				"type": "String"
+			},
+			{
+				"name": "Sales Doc. SAP / KAK No.",
+				"type": "String"
+			},
+			{
+				"name": "kNo",
+				"type": "String"
+			},
+			{
+				"name": "Local Order No",
+				"type": "String"
+			},
+			{
+				"name": "Parent Service Territory Request",
+				"type": "String"
+			},
+			{
+				"name": "Parent Service Territory Resource",
+				"type": "String"
+			},
+			{
+				"name": "PMS",
+				"type": "String"
+			},
+			{
+				"name": "PMS SU",
+				"type": "String"
+			},
+			{
+				"name": "Service Product",
+				"type": "String"
+			},
+			{
+				"name": "Source",
+				"type": "String"
+			},
+			{
+				"name": "Split No",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Status Subject",
+				"type": "String"
+			},
+			{
+				"name": "Vorgang No",
+				"type": "String"
+			},
+			{
+				"name": "Work Order",
+				"type": "String"
+			},
+			{
+				"name": "Maintenance Activity Type No",
+				"type": "String"
+			},
+			{
+				"name": "Asset",
+				"type": "String"
+			},
+			{
+				"name": "Parent Asset",
+				"type": "String"
+			}
+		]
+	}
+}
